@@ -4,22 +4,90 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="patient.css">
     <title>Patients</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="patient.css"></link>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-    <div id="patients-name">
-        <p>Hi, Zhou Leyang</p>
+    <div id="navbar">
+        <nav class="navbar navbar-expand-lg navbar-light nav-fill w-100" style="background: rgb(111, 196, 209)">
+            <a class="navbar-brand" href="#">Hello Zhou Leyang</a>
+            <a class="navbar-brand" href="#">Patient under: Dr Tan</a>
+        
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            </div>
+        </nav>
     </div>
-    <div id="patients-doctor">
-        <p>Patient under Dr. Tan</p>
-    </div>
-    <div id="patients-appointments"></div>
-    <div id="patients-medications">
-        <div id="medication-1">
-            <p>Panadol 200mg</p>
-            <p>1 tabs/6h</p>
+    <!--END OF NAVIGATION BAR AT THE TOP OF WEBPAGE CODE-->
+    
+    <div class="d-flex flex-row bd-highlight">
+        <!-- MEDICINCE TABLE -->
+        <div class=" w-75 p-3">
+            <h4>Medication</h4>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Medication</th>
+                        <th scope="col">Dosage/day</th>
+                        <th scope="col">Finish Date</th>
+                        <th scope="col">Remarks</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Panadol</td>
+                        <td>3</td>
+                        <td>28/02/2023</td>
+                        <td>Take after food. May cause drowsiness</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        
+        <!--SIDEBAR START-->
+        <div class="d-flex flex-column flex-shrink-0 bg-white">
+            <div class="list-group list-group-flush border-bottom scrollarea">
+                <a href="#" class="list-group-item list-group-item-action py-3 lh-tight">
+                    <div class="d-flex w-100 align-items-center justify-content-between">
+                        <!-- calender input -->
+                        <input type="date">
+                        <input type="time"> <br>
+                        <button>Create appointment</button>
+                    </div>
+                </a>
+                <a href="#" class="list-group-item list-group-item-action active py-3 lh-tight" aria-current="true">
+                    <div class="d-flex w-100 align-items-center justify-content-between">
+                        <strong class="mb-1">Dr Tan</strong>
+                        <small class="text-muted">23 Feb 2023, Tuesday</small>
+                    </div>
+                    <div class="col-10 mb-1 small">4:30pm</div>
+                </a>
+                <a href="#" class="list-group-item list-group-item-action py-3 lh-tight">
+                    <div class="d-flex w-100 align-items-center justify-content-between">
+                        <strong class="mb-1">Dr Tan</strong>
+                        <small class="text-muted">24 Feb 2023, Friday</small>
+                    </div>
+                    <div class="col-10 mb-1 small">4:30pm</div>
+                </a>
         </div>
     </div>
+
+    <footer>
+        <div class="footer">
+            <p>National University Hospital</p>
+            <p>5 Lower Kent Ridge Rd</p>
+            <p>Singapore 119074</p>
+            <ul class="socials">
+                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+            </ul>
+        </div>
+    </footer>
 </body>
 </html>

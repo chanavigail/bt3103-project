@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="style.css"></link>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Doctor's Page</title>
+
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function() {
+
+            //by default (when you first load the page), submit button is disabled
+            document.querySelector('#submit').disabled = true; 
+
+            document.querySelector('#patientName').onkeyup = () => { // any time when the finger comes off the key,
+                if (document.querySelector('#patientName').value.length > 0) { // if only user key in stuff
+                    document.querySelector('#submit').disabled = false; // same submit button is enabled
+                } else { // if user backspace and clears his input, submit button is disabled
+                    document.querySelector('#submit').disabled = true; // same submit button is disabled
+                }
+            }
+
+        });
+    </script>
+
+    <script type="module">
+        import { createApp } from 'https://unpkg.com/vue@3/dist/vue.esm-browser.js'
+        const HelloWorld = {
+            data() {
+                return {
+                    name: "Misty",
+                    Entry: "",
+                }
+            }
+        }
+        createApp(HelloWorld).mount('#navbar')
+    </script>
+</head>
+<body>
+    <div class="page-container">
+        <!--START OF NAVIGATION BAR AT THE TOP OF WEBPAGE CODE-->
+        <div id="navbar">
+            <nav class="navbar navbar-expand-lg navbar-light nav-fill w-100" style="background: rgb(111, 196, 209)">
+                <a class="navbar-brand" href="#">Hello {{name}}</a>
+            
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Appointments</a>
+                        </li>
+                        <li class="nav-item active dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Departments
+                            </a>
+                        </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="#">Anaesthesiology</a>
+                                <a class="dropdown-item" href="#">Cardiology</a>
+                                <a class="dropdown-item" href="#">Dermatology</a>
+                                <a class="dropdown-item" href="#">Neurology</a>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <!-- calender input -->
+                    <input type="date">
+                </div>
+            </nav>
+        </div>
+        <!--END OF NAVIGATION BAR AT THE TOP OF WEBPAGE CODE-->
+
+        <div class="d-flex flex-row-reverse bd-highlight">
+    
+            <!--SIDEBAR START-->
+            <div class="d-flex flex-column align-items-stretch flex-shrink-0 bg-white" style="width: 235px;">
+                <div class="list-group list-group-flush border-bottom scrollarea">
+                <a href="#" class="list-group-item list-group-item-action active py-3 lh-tight" aria-current="true">
+                    <div class="d-flex w-100 align-items-center justify-content-between">
+                        <strong class="mb-1">Leyang</strong>
+                        <small class="text-muted">23 Feb 2023, Tuesday</small>
+                        </div>
+                        <div class="col-10 mb-1 small">Male<br>23 years old</div>
+                </a>
+                <a href="#" class="list-group-item list-group-item-action py-3 lh-tight">
+                    <div class="d-flex w-100 align-items-center justify-content-between">
+                    <strong class="mb-1">Terence</strong>
+                    <small class="text-muted">24 Feb 2023, Friday</small>
+                    </div>
+                    <div class="col-10 mb-1 small">Male<br>23 years old</div>
+                </a>
+                <a href="#" class="list-group-item list-group-item-action py-3 lh-tight">
+                    <div class="d-flex w-100 align-items-center justify-content-between">
+                    <strong class="mb-1">Rayna</strong>
+                    <small class="text-muted">28 Feb 2023, Tuesday</small>
+                    </div>
+                    <div class="col-10 mb-1 small">Female<br>21 years old</div>
+                </a>
+                <a href="#" class="list-group-item list-group-item-action py-3 lh-tight" aria-current="true">
+                    <div class="d-flex w-100 align-items-center justify-content-between">
+                    <strong class="mb-1">Avigail</strong>
+                    <small class="text-muted">28 Feb 2023, Tuesday</small>
+                    </div>
+                    <div class="col-10 mb-1 small">Female<br>21 years old</div>
+                </a>
+                <a href="#" class="list-group-item list-group-item-action py-3 lh-tight">
+                    <div class="d-flex w-100 align-items-center justify-content-between">
+                    <strong class="mb-1">Jie Han</strong>
+                    <small class="text-muted">1 Mar 2023, Wednesday</small>
+                    </div>
+                    <div class="col-10 mb-1 small">Male<br>23 years old</div>
+                </a>
+                <a href="#" class="list-group-item list-group-item-action py-3 lh-tight">
+                    <div class="d-flex w-100 align-items-center justify-content-between">
+                    <strong class="mb-1">yes</strong>
+                    <small class="text-muted">Mon</small>
+                    </div>
+                    <div class="col-10 mb-1 small">Capybara Quiz, numero seis</div>
+                </a>
+                </div>
+            </div>
+            <!--SIDEBAR END-->
+
+            <!--START OF SEARCH BAR CODE-->
+            <div class="search">
+                <h4>Patients</h4>
+                <form id="form">
+                    <input id="patientName" placeholder="Patient's Name" type="text"><br><br>
+                    <input id="submit" type="submit">
+                </form>
+            </div>
+
+        </div>
+ 
+        <!--END OF SEARCH BAR CODE-->
+
+        <footer>
+            <div class="footer">
+                <p>National University Hospital</p>
+                <p>5 Lower Kent Ridge Rd</p>
+                <p>Singapore 119074</p>
+                <ul class="socials">
+                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+</body>
+</html>
+
